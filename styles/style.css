@@ -52,11 +52,18 @@ a.btn {
 
 }
 
+a.brand{
+	color: black;
+	font-weight:normal;
+}
+
 div.container{
 	background:none;
 }
 
-
+div.navbar-inner{
+	background-color: rgba(255, 255, 255, 0.2);
+}
 
 p{
 	font-weight: 300;
@@ -76,7 +83,8 @@ table.collection th:hover {
 }
 
 .navbar{
-	background: aqua;
+	background: rgba(0, 0, 0, 0.2);
+
 }
 
 .date-picker input
