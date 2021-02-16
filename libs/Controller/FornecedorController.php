@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Controller */
+/** @package    appalmoxarifado::Controller */
 
 /** import supporting libraries */
 require_once("AppBaseController.php");
@@ -10,7 +10,7 @@ require_once("Model/Fornecedor.php");
  * controller is responsible for processing input from the user, reading/updating
  * the model as necessary and displaying the appropriate view.
  *
- * @package Almoxarifado::Controller
+ * @package appalmoxarifado::Controller
  * @author ClassBuilder
  * @version 1.0
  */

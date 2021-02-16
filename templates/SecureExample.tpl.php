@@ -1,5 +1,5 @@
 <?php
-	$this->assign('title','Almoxarifado Secure Example');
+	$this->assign('title','appalmoxarifado Secure Example');
 	$this->assign('nav','secureexample');
 
 	$this->display('_Header.tpl.php');

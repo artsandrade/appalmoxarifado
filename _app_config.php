@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Almoxarifado
+ * @package appalmoxarifado
  *
  * APPLICATION-WIDE CONFIGURATION SETTINGS
  *

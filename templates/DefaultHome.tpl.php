@@ -1,5 +1,5 @@
 <?php
-	$this->assign('title','Almoxarifado | Home');
+	$this->assign('title','appalmoxarifado | Home');
 	$this->assign('nav','home');
 
 	$this->display('_Header.tpl.php');

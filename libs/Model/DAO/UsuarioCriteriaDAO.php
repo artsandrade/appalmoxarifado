@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Model::DAO */
+/** @package    U506861159Almoxarifado::Model::DAO */
 
 /** import supporting libraries */
 require_once("verysimple/Phreeze/Criteria.php");
@@ -14,7 +14,7 @@ require_once("verysimple/Phreeze/Criteria.php");
  * Leaving this file alone will allow easy re-generation of all DAOs in the event of schema changes
  *
  * @inheritdocs
- * @package Almoxarifado::Model::DAO
+ * @package U506861159Almoxarifado::Model::DAO
  * @author ClassBuilder
  * @version 1.0
  */

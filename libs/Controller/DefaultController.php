@@ -1,5 +1,5 @@
 <?php
-/** @package Almoxarifado::Controller */
+/** @package U506861159Almoxarifado::Controller */
 
 /** import supporting libraries */
 require_once("AppBaseController.php");
@@ -7,7 +7,7 @@ require_once("AppBaseController.php");
 /**
  * DefaultController is the entry point to the application
  *
- * @package Almoxarifado::Controller
+ * @package U506861159Almoxarifado::Controller
  * @author ClassBuilder
  * @version 1.0
  */

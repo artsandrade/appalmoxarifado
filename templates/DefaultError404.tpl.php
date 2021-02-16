@@ -1,5 +1,5 @@
 <?php
-	$this->assign('title','Almoxarifado | File Not Found');
+	$this->assign('title','appalmoxarifado | File Not Found');
 	$this->assign('nav','home');
 
 	$this->display('_Header.tpl.php');

@@ -1,5 +1,5 @@
 <?php
-/** @package Almoxarifado::Model::DAO */
+/** @package U506861159Almoxarifado::Model::DAO */
 
 /** import supporting libraries */
 require_once("verysimple/Phreeze/Phreezable.php");
@@ -15,7 +15,7 @@ require_once("FornecedorMap.php");
  * Add any custom business logic to the Model class which is extended from this DAO class.
  * Leaving this file alone will allow easy re-generation of all DAOs in the event of schema changes
  *
- * @package Almoxarifado::Model::DAO
+ * @package U506861159Almoxarifado::Model::DAO
  * @author ClassBuilder
  * @version 1.0
  */

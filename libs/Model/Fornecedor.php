@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Model */
+/** @package    U506861159Almoxarifado::Model */
 
 /** import supporting libraries */
 require_once("DAO/FornecedorDAO.php");
@@ -9,7 +9,7 @@ require_once("FornecedorCriteria.php");
  * The Fornecedor class extends FornecedorDAO which provides the access
  * to the datastore.
  *
- * @package Almoxarifado::Model
+ * @package U506861159Almoxarifado::Model
  * @author ClassBuilder
  * @version 1.0
  */

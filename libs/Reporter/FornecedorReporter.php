@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Reporter */
+/** @package    U506861159Almoxarifado::Reporter */
 
 /** import supporting libraries */
 require_once("verysimple/Phreeze/Reporter.php");
@@ -11,7 +11,7 @@ require_once("verysimple/Phreeze/Reporter.php");
  *
  * Note that Reporters are read-only and cannot be used for saving data.
  *
- * @package Almoxarifado::Model::DAO
+ * @package U506861159Almoxarifado::Model::DAO
  * @author ClassBuilder
  * @version 1.0
  */

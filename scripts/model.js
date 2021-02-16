@@ -1,5 +1,5 @@
 /**
- * backbone model definitions for Almoxarifado
+ * backbone model definitions for appalmoxarifado
  */
 
 /**

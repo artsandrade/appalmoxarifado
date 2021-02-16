@@ -6,7 +6,7 @@
 		<base href="<?php $this->eprint($this->ROOT_URL); ?>" />
 		<title><?php $this->eprint($this->title); ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Almoxarifado" />
+		<meta name="description" content="appalmoxarifado" />
 		<meta name="author" content="phreeze builder | phreeze.com" />
 
 		<!-- Le styles -->
@@ -59,7 +59,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</a>
-						<a class="brand" href="./">Almoxarifado</a>
+						<a class="brand" href="./">appalmoxarifado</a>
 						<div class="nav-collapse collapse">
 							<ul class="nav">
 								<li <?php if ($this->nav=='fornecedores') { echo 'class="active"'; } ?>><a href="./fornecedores">Fornecedores</a></li>

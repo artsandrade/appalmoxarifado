@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Model */
+/** @package    U506861159Almoxarifado::Model */
 
 /** import supporting libraries */
 require_once("DAO/FornecedorCriteriaDAO.php");
@@ -9,7 +9,7 @@ require_once("DAO/FornecedorCriteriaDAO.php");
  * to query the database for objects and collections
  * 
  * @inheritdocs
- * @package Almoxarifado::Model
+ * @package U506861159Almoxarifado::Model
  * @author ClassBuilder
  * @version 1.0
  */

@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado */
+/** @package    appalmoxarifado */
 
 /* GlobalConfig object contains all configuration information for the app */
 include_once("_global_config.php");

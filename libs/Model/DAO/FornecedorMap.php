@@ -1,5 +1,5 @@
 <?php
-/** @package    Almoxarifado::Model::DAO */
+/** @package    U506861159Almoxarifado::Model::DAO */
 
 /** import supporting libraries */
 require_once("verysimple/Phreeze/IDaoMap.php");
@@ -15,7 +15,7 @@ require_once("verysimple/Phreeze/IDaoMap2.php");
  * You can override the default fetching strategies for KeyMaps in _config.php.
  * Leaving this file alone will allow easy re-generation of all DAOs in the event of schema changes
  *
- * @package Almoxarifado::Model::DAO
+ * @package U506861159Almoxarifado::Model::DAO
  * @author ClassBuilder
  * @version 1.0
  */
