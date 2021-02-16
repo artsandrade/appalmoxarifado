@@ -181,10 +181,10 @@
 				<div class="control-group">
 					<label class="control-label"></label>
 					<div class="controls">
-						<button id="deleteFornecedorButton" class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Delete Fornecedor</button>
+						<button id="deleteFornecedorButton" class="btn btn-mini btn-danger"><i class="icon-trash icon-white"></i> Deletar Fornecedor</button>
 						<span id="confirmDeleteFornecedorContainer" class="hide">
-							<button id="cancelDeleteFornecedorButton" class="btn btn-mini">Cancel</button>
-							<button id="confirmDeleteFornecedorButton" class="btn btn-mini btn-danger">Confirm</button>
+							<button id="cancelDeleteFornecedorButton" class="btn btn-mini">Cancelar</button>
+							<button id="confirmDeleteFornecedorButton" class="btn btn-mini btn-danger">Confirmar</button>
 						</span>
 					</div>
 				</div>
@@ -197,7 +197,7 @@
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">&times;</a>
 			<h3>
-				<i class="icon-edit"></i> Edit Fornecedor
+				<i class="icon-edit"></i> Editar Fornecedor
 				<span id="modelLoader" class="loader progress progress-striped active"><span class="bar"></span></span>
 			</h3>
 		</div>
@@ -206,8 +206,8 @@
 			<div id="fornecedorModelContainer"></div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" >Cancel</button>
-			<button id="saveFornecedorButton" class="btn btn-primary">Save Changes</button>
+			<button class="btn" data-dismiss="modal" >Cancelar</button>
+			<button id="saveFornecedorButton" class="btn btn-primary">Salvar</button>
 		</div>
 	</div>
 

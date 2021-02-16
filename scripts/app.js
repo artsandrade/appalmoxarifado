@@ -110,7 +110,7 @@ var app = {
 		
 		// if the value passed in was blank, default to today
 		if (str == '' || typeof(str) == 'undefined') {
-			if (console) console.log('app.parseDate: empty or undefined date value');
+			if (console) console.log('app.parseDate: vazio ou incorreto');
 			return defaultDate;
 		}
 
@@ -164,7 +164,7 @@ var app = {
 	 */
 	getErrorMessage: function(resp) {
 
-		var msg = 'An unknown error occured';
+		var msg = 'Um erro ocorreu...';
 		try	{
 			var json = $.parseJSON(resp.responseText);
 			msg = json.message;
@@ -178,7 +178,7 @@ var app = {
 			}
 		}
 
-		return msg ? msg : 'Unknown server error';
+		return msg ? msg : 'Erro desconhecido';
 	},
 
 	version: 1.1

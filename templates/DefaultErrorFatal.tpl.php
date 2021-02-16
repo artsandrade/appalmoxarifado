@@ -7,17 +7,16 @@
 
 <div class="container">
 
-	<h1>Oh Snap!</h1>
+	<h1>Desculpa...</h1>
 
 	<!-- this is used by app.js for scraping -->
 	<!-- ERROR <?php $this->eprint($this->message); ?> /ERROR -->
 
 	<h3 onclick="$('#stacktrace').show('slow');" class="well" style="cursor: pointer;"><?php $this->eprint($this->message); ?></h3>
 
-	<p>You may want to try returning to the the previous page and verifying that
-	all fields have been filled out correctly.</p>
+	<p>Você pode voltar uma página e tentar novamente.</p>
 
-	<p>If you continue to experience this error please contact support.</p>
+	<p>Se o erro persistir, contate o suporte.</p>
 
 	<div id="stacktrace" class="well hide">
 		<p style="font-weight: bold;">Stack Trace:</p>
