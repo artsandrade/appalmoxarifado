@@ -1,23 +1,61 @@
-/*!
- * application style overrides and customizations
- */
 
-/* note that this gets overridden by bootstrap-responsive.min.css when screen size changes */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Ultra&display=swap');
+
 body {
 	padding-top: 60px;
 	padding-bottom: 40px;
+	
+	
+	background: linear-gradient(45deg, #d8c292, #5b5b5b, #b67171, #c19065);
+	background-size: 300%, 300%;
+	animation: colors 15s ease infinite;
 }
 
-h1 {
-	margin-bottom: 8px;
+
+.hero-unit{
+	background-color:rgba(255, 255, 255, 0.2);
+	border-radius: 50px;
+	box-shadow: black;
+	border: 1px solid;
+	
+	box-shadow: 5px 10px rgba(7, 7, 7, 0.5);
 }
+
+.muted{
+	color: black;
+}
+
+h1.nome {
+	
+	padding-bottom: 2rem;
+	text-align: center;
+	margin-top: 8px;
+	color: #020202;
+	font-weight: normal;
+	font-family: 'Bungee', sans-serif;   
+	font-size: 50px;
+	line-height: 42px;
+	text-transform: uppercase;
+	text-shadow: 0 2px white, 0 3px #777;
+}
+
 
 hr {
 	margin: 10px 0px 10px 0px;
 }
+a.btn {
+	color: black;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 30px;
+	
 
-p.buttonContainer {
-
+}
+p{
+	font-weight: 300;
+	color: black;
+}
+a.btn :hover{
+	background: green;
 }
 
 table.collection tr:hover {
@@ -27,6 +65,10 @@ table.collection tr:hover {
 table.collection th:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+.navbar{
+	background: aqua;
 }
 
 .date-picker input
@@ -95,4 +137,16 @@ span.help-inline {
 /* fixes spacing glitch with combo-box followed by an empty inline help */
 span.help-inline:empty {
 	display: none;
+}
+
+@keyframes colors {
+0% {
+ background-position: 0% 50%;
+}
+50% {
+ background-position: 100% 50%;
+}
+100% {
+ background-position: 0% 50%;
+}
 }

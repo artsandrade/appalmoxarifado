@@ -50,8 +50,8 @@
 	</head>
 
 	<body>
-
-			<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="menu">
+			<div sty class="navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-inner">
 					<div class="container">
 						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -59,7 +59,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</a>
-						<a class="brand" href="./">appalmoxarifado</a>
+						<a class="brand" href="./">Almoxarifado</a>
 						<div class="nav-collapse collapse">
 							<ul class="nav">
 								<li <?php if ($this->nav=='fornecedores') { echo 'class="active"'; } ?>><a href="./fornecedores">Fornecedores</a></li>
@@ -71,14 +71,16 @@
 								<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-lock"></i> Login <i class="caret"></i></a>
 								<ul class="dropdown-menu">
-									<li><a href="./loginform">Login</a></li>
+									<li><a href="./loginform">Entrar</a></li>
 									<li class="divider"></li>
-									<li><a href="./secureuser">Example User Page <i class="icon-lock"></i></a></li>
-									<li><a href="./secureadmin">Example Admin Page <i class="icon-lock"></i></a></li>
+									<li><a href="./secureuser">Usuario de exemplo <i class="icon-lock"></i></a></li>
+									<li><a href="./secureadmin">Administrador de exemplo <i class="icon-lock"></i></a></li>
 								</ul>
 								</li>
 							</ul>
 						</div><!--/.nav-collapse -->
+
 					</div>
 				</div>
 			</div>
+		</div>
