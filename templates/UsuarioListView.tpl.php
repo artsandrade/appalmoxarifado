@@ -1,37 +1,37 @@
 <?php
-	$this->assign('title','Almoxarifado | Usuarios');
-	$this->assign('nav','usuarios');
+$this->assign('title', 'Almoxarifado | Usuarios');
+$this->assign('nav', 'usuarios');
 
-	$this->display('_Header.tpl.php');
+$this->display('_Header.tpl.php');
 ?>
 
 <script type="text/javascript">
-	$LAB.script("scripts/app/usuarios.js").wait(function(){
-		$(document).ready(function(){
+	$LAB.script("scripts/app/usuarios.js").wait(function() {
+		$(document).ready(function() {
 			page.init();
 		});
-		
+
 		// hack for IE9 which may respond inconsistently with document.ready
-		setTimeout(function(){
+		setTimeout(function() {
 			if (!page.isInitialized) page.init();
-		},1000);
+		}, 1000);
 	});
 </script>
 
 <div class="container">
 
-<h1>
-	<i class="icon-th-list"></i> Usuarios
-	<span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
-	<span class='input-append pull-right searchContainer'>
-		<input id='filter' type="text" placeholder="Procurar..." />
-		<button class='btn add-on'><i class="icon-search"></i></button>
-	</span>
-</h1>
+	<h1>
+		<i class="icon-th-list"></i> Usuários
+		<span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
+		<span class='input-append pull-right searchContainer'>
+			<input id='filter' type="text" placeholder="Procurar..." />
+			<button class='btn add-on'><i class="icon-search"></i></button>
+		</span>
+	</h1>
 
 	<!-- underscore template for the collection -->
 	<script type="text/template" id="usuarioCollectionTemplate">
-		<table class="collection table table-bordered table-hover">
+		<table class="collection table table-dark table-bordered table-hover">
 		<thead>
 			<tr>
 				<th id="header_IdUsuario">Id Usuario<% if (page.orderBy == 'IdUsuario') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
@@ -79,42 +79,47 @@
 				<div id="nomeInputContainer" class="control-group">
 					<label class="control-label" for="nome">Nome</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="nome" placeholder="Nome" value="<%= _.escape(item.get('nome') || '') %>">
+						<input type="text" class="input-xlarge" id="nome" placeholder="Nome" value="<%= _.escape(item.get('nome') || '') %>" required>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="nMatriculaInputContainer" class="control-group">
 					<label class="control-label" for="nMatricula">N Matricula</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="nMatricula" placeholder="N Matricula" value="<%= _.escape(item.get('nMatricula') || '') %>">
+						<input type="text" class="input-xlarge" id="nMatricula" placeholder="N Matricula" value="<%= _.escape(item.get('nMatricula') || '') %>" required>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="emailInputContainer" class="control-group">
 					<label class="control-label" for="email">Email</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="email" placeholder="Email" value="<%= _.escape(item.get('email') || '') %>">
+						<input type="email" class="input-xlarge" id="email" placeholder="Email" value="<%= _.escape(item.get('email') || '') %>" required>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="loginInputContainer" class="control-group">
 					<label class="control-label" for="login">Login</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="login" placeholder="Login" value="<%= _.escape(item.get('login') || '') %>">
+						<input type="text" class="input-xlarge" id="login" placeholder="Login" value="<%= _.escape(item.get('login') || '') %>" required>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="senhaInputContainer" class="control-group">
 					<label class="control-label" for="senha">Senha</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="senha" placeholder="Senha" value="<%= _.escape(item.get('senha') || '') %>">
+						<input type="password" class="input-xlarge" id="senha" placeholder="Senha" value="<%= _.escape(item.get('senha') || '') %>" required>
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="nivelAcessoInputContainer" class="control-group">
 					<label class="control-label" for="nivelAcesso">Nivel Acesso</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="nivelAcesso" placeholder="Nivel Acesso" value="<%= _.escape(item.get('nivelAcesso') || '') %>">
+						<select class="input-xlarge" id="nivelAcesso" required>
+						<option value="Administrador" <% if (item.get('nivelAcesso') == 'Administrador') { selected }%>>Administrador</option>
+						<option value="Almoxarife" <% if (item.get('nivelAcesso') == 'Almoxarife') { selected }%>>Almoxarife</option>
+						<option value="Colaborador">Colaborador</option>
+						<option value="Gerente">Gerente</option>
+						</select>
 						<span class="help-inline"></span>
 					</div>
 				</div>
@@ -152,22 +157,22 @@
 			<div id="usuarioModelContainer"></div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" >Cancelar</button>
+			<button class="btn" data-dismiss="modal">Cancelar</button>
 			<button id="saveUsuarioButton" class="btn btn-primary">Salvar</button>
 		</div>
 	</div>
 
 	<div id="collectionAlert"></div>
-	
+
 	<div id="usuarioCollectionContainer" class="collectionContainer">
 	</div>
 
 	<p id="newButtonContainer" class="buttonContainer">
-		<button id="newUsuarioButton" class="btn btn-primary">Add Usuario</button>
+		<button id="newUsuarioButton" class="btn btn-primary">Adicionar usuário</button>
 	</p>
 
 </div> <!-- /container -->
 
 <?php
-	$this->display('_Footer.tpl.php');
+$this->display('_Footer.tpl.php');
 ?>
