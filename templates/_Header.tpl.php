@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-Frame-Options" content="deny">
@@ -20,6 +20,12 @@
 		<link href="bootstrap/css/datepicker.css" rel="stylesheet" />
 		<link href="bootstrap/css/timepicker.css" rel="stylesheet" />
 		<link href="bootstrap/css/bootstrap-combobox.css" rel="stylesheet" />
+
+		<!-- Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!--Jquery Mask (formatação de campos) -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -63,7 +69,7 @@
 						<div class="nav-collapse collapse">
 							<ul class="nav">
 								<li <?php if ($this->nav=='fornecedores') { echo 'class="active"'; } ?>><a href="./fornecedores">Fornecedores</a></li>
-								<li <?php if ($this->nav=='usuarios') { echo 'class="active"'; } ?>><a href="./usuarios">Usuarios</a></li>
+								<li <?php if ($this->nav=='usuarios') { echo 'class="active"'; } ?>><a href="./usuarios">Usuários</a></li>
 								</ul>
 								</li>
 							</ul>
@@ -72,9 +78,6 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-lock"></i> Login <i class="caret"></i></a>
 								<ul class="dropdown-menu">
 									<li><a href="./loginform">Entrar</a></li>
-									<li class="divider"></li>
-									<li><a href="./secureuser">Usuario de exemplo <i class="icon-lock"></i></a></li>
-									<li><a href="./secureadmin">Administrador de exemplo <i class="icon-lock"></i></a></li>
 								</ul>
 								</li>
 							</ul>

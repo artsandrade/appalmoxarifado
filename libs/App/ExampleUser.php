@@ -39,8 +39,15 @@ class ExampleUser implements IAuthenticatable
 		if (!self::$USERS)
 		{
 			self::$USERS = Array(
-				"demo"=>password_hash("pass",PASSWORD_BCRYPT),
-				"admin"=>password_hash("pass",PASSWORD_BCRYPT)
+				"arielle"=>password_hash("123",PASSWORD_BCRYPT),
+				"ana"=>password_hash("123",PASSWORD_BCRYPT),
+				"andre"=>password_hash("123",PASSWORD_BCRYPT),
+				"arthur"=>password_hash("123",PASSWORD_BCRYPT),
+				"elias"=>password_hash("123",PASSWORD_BCRYPT),
+				"geraldo"=>password_hash("123",PASSWORD_BCRYPT),
+				"guilherme"=>password_hash("123",PASSWORD_BCRYPT),
+				"lucas"=>password_hash("123",PASSWORD_BCRYPT),
+				"matheus"=>password_hash("123",PASSWORD_BCRYPT),
 			);
 		}
 	}
@@ -63,7 +70,7 @@ class ExampleUser implements IAuthenticatable
 	 */
 	public function IsAuthorized($permission)
 	{
-		if ($this->Username == 'admin') return true;
+		if ($this->Username == 'arielle' || $this->Username == 'ana' || $this->Username == 'andre' || $this->Username == 'arthur' || $this->Username == 'elias' || $this->Username == 'geraldo' || $this->Username == 'guilherme' || $this->Username == 'lucas' || $this->Username == 'matheus') return true;
 		
 		if ($this->Username == 'demo' && $permission == self::$PERMISSION_USER) return true;
 		
