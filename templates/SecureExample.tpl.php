@@ -1,8 +1,13 @@
 <?php
+<<<<<<< HEAD
 	$this->assign('title','Tela de Login');
 	$this->assign('nav','secureexample');
+=======
+$this->assign('title', 'Almoxarifado | Login');
+$this->assign('nav', 'secureexample');
+>>>>>>> 7d9f6470a7ff7fbb882d2c5dba15f7cee5ef0078
 
-	$this->display('_Header.tpl.php');
+$this->display('_Header.tpl.php');
 ?>
 
 <div class="container">
@@ -13,10 +18,11 @@
 			<?php $this->eprint($this->feedback); ?>
 		</div>
 	<?php } ?>
-	
+
 	<!-- #### this view/tempalate is used for multiple pages.  the controller sets the 'page' variable to display differnet content ####  -->
-	
+
 	<?php if ($this->page == 'login') { ?>
+<<<<<<< HEAD
 	
 		
 			<h1>Entrar</h1>
@@ -38,31 +44,51 @@
 				</div>
 				<div class="control-group">
 				<input id="password" name="password" type="password" placeholder="Senha..." />
+=======
+
+		<div class="hero-unit">
+			<h1>Login - Almoxarifado</h1>
+		</div>
+
+		<form class="well" method="post" action="login">
+			<fieldset>
+				<legend>Insira suas credenciais abaixo</legend>
+				<div class="control-group">
+					<input id="username" name="username" type="text" placeholder="Login" />
 				</div>
 				<div class="control-group">
-				<button type="submit" class="btn btn-primary">Login</button>
+					<input id="password" name="password" type="password" placeholder="Senha" />
+>>>>>>> 7d9f6470a7ff7fbb882d2c5dba15f7cee5ef0078
+				</div>
+				<div class="control-group">
+					<button type="submit" class="btn btn-primary">Entrar</button>
 				</div>
 				</center>
 			</fieldset>
+<<<<<<< HEAD
 	
 		</div>
 	
+=======
+		</form>
+
+>>>>>>> 7d9f6470a7ff7fbb882d2c5dba15f7cee5ef0078
 	<?php } else { ?>
-	
+
 		<div class="hero-unit">
-			<h1>Secure <?php $this->eprint($this->page == 'userpage' ? 'User' : 'Admin'); ?> Page</h1>
-			<p>This page is accessible only to <?php $this->eprint($this->page == 'userpage' ? 'authenticated users' : 'administrators'); ?>.  
-			You are currently logged in as '<strong><?php $this->eprint($this->currentUser->Username); ?></strong>'</p>
-			<p>
-				<a href="secureuser" class="btn btn-primary btn-large">Visit User Page</a>
-				<a href="secureadmin" class="btn btn-primary btn-large">Visit Admin Page</a>
-				<a href="logout" class="btn btn-primary btn-large">Logout</a>
-			</p>
+			<h1>Bem-vindo</h1>
+			<p>Área restrita apenas a usuários logados.
+				Você está logado como '<strong><?php $this->eprint($this->currentUser->Username); ?></strong>'.</p>
+			<Left>
+				<a class="btn btn-primary btn-large" data-toggle="modal" href="./fornecedores">Fornecedores &raquo;</a>
+				<a class="btn btn-primary btn-large" data-toggle="modal" href="./usuarios">Usuários &raquo;</a></p>
+				<a class="btn btn-primary btn-large" data-toggle="modal" href="./logout">Sair &raquo;</a></p>
+			</Left>
 		</div>
 	<?php } ?>
 
 </div> <!-- /container -->
 
 <?php
-	$this->display('_Footer.tpl.php');
+$this->display('_Footer.tpl.php');
 ?>

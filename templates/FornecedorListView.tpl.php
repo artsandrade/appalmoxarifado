@@ -1,33 +1,33 @@
 <?php
-	$this->assign('title','Almoxarifado | Fornecedores');
-	$this->assign('nav','fornecedores');
+$this->assign('title', 'Almoxarifado | Fornecedores');
+$this->assign('nav', 'fornecedores');
 
-	$this->display('_Header.tpl.php');
+$this->display('_Header.tpl.php');
 ?>
 
 <script type="text/javascript">
-	$LAB.script("scripts/app/fornecedores.js").wait(function(){
-		$(document).ready(function(){
+	$LAB.script("scripts/app/fornecedores.js").wait(function() {
+		$(document).ready(function() {
 			page.init();
 		});
-		
+
 		// hack for IE9 which may respond inconsistently with document.ready
-		setTimeout(function(){
+		setTimeout(function() {
 			if (!page.isInitialized) page.init();
-		},1000);
+		}, 1000);
 	});
 </script>
 
 <div class="container">
 
-<h1>
-	<i class="icon-th-list"></i> Fornecedores
-	<span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
-	<span class='input-append pull-right searchContainer'>
-		<input id='filter' type="text" placeholder="Procurar..." />
-		<button class='btn add-on'><i class="icon-search"></i></button>
-	</span>
-</h1>
+	<h1>
+		<i class="icon-th-list"></i> Fornecedores
+		<span id=loader class="loader progress progress-striped active"><span class="bar"></span></span>
+		<span class='input-append pull-right searchContainer'>
+			<input id='filter' type="text" placeholder="Procurar..." />
+			<button class='btn add-on'><i class="icon-search"></i></button>
+		</span>
+	</h1>
 
 	<!-- underscore template for the collection -->
 	<script type="text/template" id="fornecedorCollectionTemplate">
@@ -94,7 +94,7 @@
 				<div id="emailInputContainer" class="control-group">
 					<label class="control-label" for="email">Email</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="email" placeholder="Email" value="<%= _.escape(item.get('email') || '') %>">
+						<input type="email" class="input-xlarge" id="email" placeholder="Email" value="<%= _.escape(item.get('email') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
@@ -108,21 +108,21 @@
 				<div id="cepInputContainer" class="control-group">
 					<label class="control-label" for="cep">Cep</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="cep" placeholder="Cep" value="<%= _.escape(item.get('cep') || '') %>">
+						<input type="text" class="input-xlarge" id="cep" name="cep" placeholder="Cep" value="<%= _.escape(item.get('cep') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="enderecoInputContainer" class="control-group">
 					<label class="control-label" for="endereco">Endereco</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="endereco" placeholder="Endereco" value="<%= _.escape(item.get('endereco') || '') %>">
+						<input type="text" class="input-xlarge" id="endereco" name="endereco" placeholder="Endereco" value="<%= _.escape(item.get('endereco') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="bairroInputContainer" class="control-group">
 					<label class="control-label" for="bairro">Bairro</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="bairro" placeholder="Bairro" value="<%= _.escape(item.get('bairro') || '') %>">
+						<input type="text" class="input-xlarge" id="bairro" name="bairro" placeholder="Bairro" value="<%= _.escape(item.get('bairro') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
@@ -136,14 +136,14 @@
 				<div id="cidadeInputContainer" class="control-group">
 					<label class="control-label" for="cidade">Cidade</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="cidade" placeholder="Cidade" value="<%= _.escape(item.get('cidade') || '') %>">
+						<input type="text" class="input-xlarge" id="cidade" name="cidade" placeholder="Cidade" value="<%= _.escape(item.get('cidade') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
 				<div id="estadoInputContainer" class="control-group">
 					<label class="control-label" for="estado">Estado</label>
 					<div class="controls inline-inputs">
-						<input type="text" class="input-xlarge" id="estado" placeholder="Estado" value="<%= _.escape(item.get('estado') || '') %>">
+						<input type="text" class="input-xlarge" id="estado" name="estado" placeholder="Estado" value="<%= _.escape(item.get('estado') || '') %>">
 						<span class="help-inline"></span>
 					</div>
 				</div>
@@ -186,22 +186,58 @@
 			<div id="fornecedorModelContainer"></div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" >Cancelar</button>
+			<button class="btn" data-dismiss="modal">Cancelar</button>
 			<button id="saveFornecedorButton" class="btn btn-primary">Salvar</button>
 		</div>
 	</div>
 
 	<div id="collectionAlert"></div>
-	
+
 	<div id="fornecedorCollectionContainer" class="collectionContainer">
 	</div>
 
 	<p id="newButtonContainer" class="buttonContainer">
-		<button id="newFornecedorButton" class="btn btn-primary">Add Fornecedor</button>
+		<button id="newFornecedorButton" class="btn btn-primary">Adicionar fornecedor</button>
 	</p>
 
+<<<<<<< HEAD
 </div> 
+=======
+	<script>
+		var $cnpj = $("#cnpj");
+		$cnpj.mask('00.000.000/0000-00');
+
+		var $cep = $("#cep");
+		$cep.mask('00000-000');
+
+		var $telefone = $("#telefone");
+		$telefone.mask('(00) 0000-0000');
+		
+		const $campoCep = document.querySelector('[name="cep"]');
+		const $campoEndereco = document.querySelector('[name="endereco"]');
+		const $campoBairro = document.querySelector('[name="bairro"]');
+		const $campoCidade = document.querySelector('[name="cidade"]');
+		const $campoEstado = document.querySelector('[name="estado"]');
+
+		$campoCep.addEventListener("blur", infosDoEvento => {
+			const cep = infosDoEvento.target.value;
+			fetch(`https://viacep.com.br/ws/${cep}/json/`)
+				.then(respostaDoServer => {
+					return respostaDoServer.json();
+				})
+				.then(dadosDoCep => {
+					console.log(dadosDoCep);
+					$campoCidade.value = dadosDoCep.localidade;
+					$campoEstado.value = dadosDoCep.uf;
+					$campoEndereco.value = dadosDoCep.logradouro;
+					$campoBairro.value = dadosDoCep.bairro;
+				});
+		});
+	</script>
+
+</div> <!-- /container -->
+>>>>>>> 7d9f6470a7ff7fbb882d2c5dba15f7cee5ef0078
 
 <?php
-	$this->display('_Footer.tpl.php');
+$this->display('_Footer.tpl.php');
 ?>
