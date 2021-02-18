@@ -39,16 +39,7 @@
 				<th id="header_RazaoSocial">Razao Social<% if (page.orderBy == 'RazaoSocial') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Cnpj">Cnpj<% if (page.orderBy == 'Cnpj') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Email">Email<% if (page.orderBy == 'Email') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-				<th id="header_Telefone">Telefone<% if (page.orderBy == 'Telefone') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Cep">Cep<% if (page.orderBy == 'Cep') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Endereco">Endereco<% if (page.orderBy == 'Endereco') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Bairro">Bairro<% if (page.orderBy == 'Bairro') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Complemento">Complemento<% if (page.orderBy == 'Complemento') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Cidade">Cidade<% if (page.orderBy == 'Cidade') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Estado">Estado<% if (page.orderBy == 'Estado') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Representante">Representante<% if (page.orderBy == 'Representante') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
--->
+
 			</tr>
 		</thead>
 		<tbody>
@@ -59,16 +50,7 @@
 				<td><%= _.escape(item.get('razaoSocial') || '') %></td>
 				<td><%= _.escape(item.get('cnpj') || '') %></td>
 				<td><%= _.escape(item.get('email') || '') %></td>
-<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-				<td><%= _.escape(item.get('telefone') || '') %></td>
-				<td><%= _.escape(item.get('cep') || '') %></td>
-				<td><%= _.escape(item.get('endereco') || '') %></td>
-				<td><%= _.escape(item.get('bairro') || '') %></td>
-				<td><%= _.escape(item.get('complemento') || '') %></td>
-				<td><%= _.escape(item.get('cidade') || '') %></td>
-				<td><%= _.escape(item.get('estado') || '') %></td>
-				<td><%= _.escape(item.get('representante') || '') %></td>
--->
+
 			</tr>
 		<% }); %>
 		</tbody>
@@ -77,7 +59,7 @@
 		<%=  view.getPaginationHtml(page) %>
 	</script>
 
-	<!-- underscore template for the model -->
+	
 	<script type="text/template" id="fornecedorModelTemplate">
 		<form class="form-horizontal" onsubmit="return false;">
 			<fieldset>
@@ -175,7 +157,6 @@
 			</fieldset>
 		</form>
 
-		<!-- delete button is is a separate form to prevent enter key from triggering a delete -->
 		<form id="deleteFornecedorButtonContainer" class="form-horizontal" onsubmit="return false;">
 			<fieldset>
 				<div class="control-group">
@@ -192,7 +173,6 @@
 		</form>
 	</script>
 
-	<!-- modal edit dialog -->
 	<div class="modal hide fade" id="fornecedorDetailDialog">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">&times;</a>
@@ -220,7 +200,7 @@
 		<button id="newFornecedorButton" class="btn btn-primary">Add Fornecedor</button>
 	</p>
 
-</div> <!-- /container -->
+</div> 
 
 <?php
 	$this->display('_Footer.tpl.php');

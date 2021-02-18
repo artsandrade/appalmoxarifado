@@ -9,7 +9,6 @@
 	<div class="container">
 
 		
-		<!-- Main hero unit for a primary marketing message or call to action -->
 		<div class="hero-unit">
 			<center>
 			<h1 class="nome" >Almoxarifado </h1>
@@ -25,10 +24,10 @@
 			</Center>
 		</div>
 
-		<!-- Example row of columns -->
+		
 		
 			
-	</div> <!-- /container -->
+	</div> 
 
 <?php
 	$this->display('_Footer.tpl.php');

@@ -29,7 +29,6 @@
 	</span>
 </h1>
 
-	<!-- underscore template for the collection -->
 	<script type="text/template" id="usuarioCollectionTemplate">
 		<table class="collection table table-bordered table-hover">
 		<thead>
@@ -39,10 +38,7 @@
 				<th id="header_NMatricula">N Matricula<% if (page.orderBy == 'NMatricula') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Email">Email<% if (page.orderBy == 'Email') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_Login">Login<% if (page.orderBy == 'Login') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-				<th id="header_Senha">Senha<% if (page.orderBy == 'Senha') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_NivelAcesso">Nivel Acesso<% if (page.orderBy == 'NivelAcesso') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
--->
+
 			</tr>
 		</thead>
 		<tbody>
@@ -53,10 +49,7 @@
 				<td><%= _.escape(item.get('nMatricula') || '') %></td>
 				<td><%= _.escape(item.get('email') || '') %></td>
 				<td><%= _.escape(item.get('login') || '') %></td>
-<!-- UNCOMMENT TO SHOW ADDITIONAL COLUMNS
-				<td><%= _.escape(item.get('senha') || '') %></td>
-				<td><%= _.escape(item.get('nivelAcesso') || '') %></td>
--->
+
 			</tr>
 		<% }); %>
 		</tbody>
@@ -65,7 +58,6 @@
 		<%=  view.getPaginationHtml(page) %>
 	</script>
 
-	<!-- underscore template for the model -->
 	<script type="text/template" id="usuarioModelTemplate">
 		<form class="form-horizontal" onsubmit="return false;">
 			<fieldset>
@@ -121,7 +113,6 @@
 			</fieldset>
 		</form>
 
-		<!-- delete button is is a separate form to prevent enter key from triggering a delete -->
 		<form id="deleteUsuarioButtonContainer" class="form-horizontal" onsubmit="return false;">
 			<fieldset>
 				<div class="control-group">
@@ -138,7 +129,6 @@
 		</form>
 	</script>
 
-	<!-- modal edit dialog -->
 	<div class="modal hide fade" id="usuarioDetailDialog">
 		<div class="modal-header">
 			<a class="close" data-dismiss="modal">&times;</a>
@@ -166,7 +156,7 @@
 		<button id="newUsuarioButton" class="btn btn-primary">Add Usuario</button>
 	</p>
 
-</div> <!-- /container -->
+</div> 
 
 <?php
 	$this->display('_Footer.tpl.php');

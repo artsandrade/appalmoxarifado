@@ -1,5 +1,5 @@
 <?php
-	$this->assign('title','appalmoxarifado Secure Example');
+	$this->assign('title','Tela de Login');
 	$this->assign('nav','secureexample');
 
 	$this->display('_Header.tpl.php');
@@ -18,32 +18,34 @@
 	
 	<?php if ($this->page == 'login') { ?>
 	
-		<div class="hero-unit">
-			<h1>Login Example</h1>
-			<p>This is an example of Phreeze authentication.  The default credentials are <strong>demo/pass</strong> and <strong>admin/pass</strong>.</p>
-			<p>
-				<a href="secureuser" class="btn btn-primary btn-large">Visit User Page</a>
-				<a href="secureadmin" class="btn btn-primary btn-large">Visit Admin Page</a>
+		
+			<h1>Entrar</h1>
+			
+			
 				<?php if (isset($this->currentUser)) { ?>
 					<a href="logout" class="btn btn-primary btn-large">Logout</a>
 				<?php } ?>
 			</p>
 		</div>
 	
-		<form class="well" method="post" action="login">
-			<fieldset>
-			<legend>Enter your credentials</legend>
+		<form  method="post" action="login">
+			<fieldset class="hero-unit">
+				<center>
+			<legend>Coloque suas credenciais</legend>
+
 				<div class="control-group">
-				<input id="username" name="username" type="text" placeholder="Username..." />
+				<input id="username" name="username" type="text" placeholder="Usuario..." />
 				</div>
 				<div class="control-group">
-				<input id="password" name="password" type="password" placeholder="Password..." />
+				<input id="password" name="password" type="password" placeholder="Senha..." />
 				</div>
 				<div class="control-group">
 				<button type="submit" class="btn btn-primary">Login</button>
 				</div>
+				</center>
 			</fieldset>
-		</form>
+	
+		</div>
 	
 	<?php } else { ?>
 	
